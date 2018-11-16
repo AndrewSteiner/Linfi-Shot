@@ -10,14 +10,16 @@ How to setup the tool:
 1. Make sure you have the following tool dependicies.
 
 Tool Dependicies
-Auditd: `sudo apt-get install auditd`
-Python3: `sudo apt-get install python3`
-Pandas: 
-`sudo apt-get install python-pip`
-`sudo pip install numpy`
-`sudo pip install pandas`
+Auditd:
+`sudo apt-get install auditd`</br>
+Python3:
+`sudo apt-get install python3`</br>
+Pandas: </br>
+`sudo apt-get install python-pip`</br>
+`sudo pip install numpy`</br>
+`sudo pip install pandas`</br>
 Matplotlib:
-`sudo apt-get install python3-matplotlib`
+`sudo apt-get install python3-matplotlib`</br>
 
 2. Download the project folder.
 
