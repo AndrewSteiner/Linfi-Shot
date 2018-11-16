@@ -62,8 +62,14 @@ pylab.figure(1)
 #colors = cm.rainbow(range(len(procSet)))
 colors = ['r', 'g', 'b', 'g', 'y']
 # make color legend
-for p, c in zip(procSet, colors):
-    legend[p]=c
+#for p, c in zip(procSet, colors):
+#    legend[p]=c
+
+
+i=0
+for p in procSet:
+    legend[p] = colors[i%len(colors)]
+    i=i+1
 
 print("Legend")
 print(legend)
