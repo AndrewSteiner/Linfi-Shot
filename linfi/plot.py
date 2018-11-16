@@ -17,17 +17,12 @@ col_list = ['TIME','OBJ_PRIME','HOW']
 
 df=df[col_list]
 
+print(len(df))
 row_count = len(df)
 i = 0
 # TIME, OBJ_PRIME, HOW
 
 
-#print(df.HOW)
-#print(df.OBJ_PRIME)
-
-
-
-#print("********************************************/n***************")
 time = []
 fil = []
 proc = []
@@ -75,9 +70,15 @@ print(legend)
 i=0
 while i<len(time):
     
-    print("color=", legend[proc[i]])
-    pylab.scatter(time[i], fil[i], color=legend[proc[i]])
+    pylab.scatter(time[i], fil[i], color=legend[proc[i]], label=proc[i])
     i=i+1
-#pylab.scatter(time, fil, s=row_count)
+
+
+# apply settings to graph
+pylab.grid(True)
+
+pylab.xlabel('Time')
+pylab.ylabel('File')
+
 pylab.show()
 
