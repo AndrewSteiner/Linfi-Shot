@@ -1,0 +1,49 @@
+#!/bin/bash
+
+
+bak=$(auditctl -l)
+
+echo $bak
+
+auditctl -D
+
+#files=(/boot/vimlinux/ /boot/vmlinuz /etc/bashrc /etc/crontab /etc/hosts /etc/hosts.allow /etc/host.deny /etc/group /etc/inittab /etc/passwd /etc/resolve.conf /proc/cpuinfo /proc/filesystems /etc/init.d /etc/profile.d /etc/rc.d/init.d /etc/shadow /tmp/)
+
+
+files=(/etc/passwd)
+for i in "${files[@]}"; do
+	auditctl -w $i -k $i
+	echo $i
+done
+
+auditctl -l
+cat /etc/passwd &
+read -p "Press enter after you've installed/run the test program..."
+touch ausearchOut
+for i in "${files[@]}"; do
+	
+       	echo "**************************************************************************************"
+	echo "**************************************************************************************"	
+	echo                                          $i
+	echo "**************************************************************************************"
+	echo "**************************************************************************************"
+	
+	#res=$(ausearch -k $i)
+
+	#echo $res | aureport -au
+	#echo $res | aureport 
+	# Report about files and af_unix sockets	
+	#echo $res | aureport -f 
+
+	ausearch -k $i --start today --format csv >> ausearchOut
+
+	awk '!/NODE,EVENT,/' ausearchOut > temp && mv temp ausearchOut
+done
+
+auditctl -D
+
+./plot.py
+
+while IFS= read; do sudo auditctl $REPLY
+done <<< "$bak"
+
