@@ -21,9 +21,11 @@ Pandas: </br>
 Matplotlib:
 `sudo apt-get install python3-matplotlib`</br>
 
-2. Download the project folder.
+2. Download the project folder and navigate in project folder.</br>
 
-3. Navigate into the project folder and start tool:
+
+3. Navigate into the linfi folder and start tool:</br>
+`cd linfi/`</br>
 `sudo ./linfi`
 
 
