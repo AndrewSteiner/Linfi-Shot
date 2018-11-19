@@ -21,7 +21,7 @@ Auditd:
 Python3:
 `sudo apt-get install python3`</br>
 Pandas: </br>
-`sudo apt-get install python-pip3`</br>
+`sudo apt-get install python3-pip`</br>
 `sudo pip3 install numpy`</br>
 `sudo pip3 install pandas`</br>
 Matplotlib:
