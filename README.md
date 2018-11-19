@@ -7,7 +7,13 @@ Besides the quick functionality of this tool, another key component is how user 
 
 
 How to setup the tool:
-1. Make sure you have the following tool dependicies.
+
+1.If you are using Ubuntu (recommended) please check the version:</br>
+  Make sure you are using Ubuntu 18.04 or later. 
+  Check: `lsb release -a`
+
+
+2.Make sure you have the following tool dependicies.
 
 Tool Dependicies
 Auditd:
@@ -21,10 +27,10 @@ Pandas: </br>
 Matplotlib:
 `sudo apt-get install python3-matplotlib`</br>
 
-2. Download the project folder and navigate in project folder.</br>
+3. Download the project folder and navigate in project folder.</br>
 
 
-3. Navigate into the linfi folder and start tool:</br>
+4. Navigate into the linfi folder and start tool:</br>
 `cd linfi/`</br>
 `sudo ./linfi`
 
