@@ -12,7 +12,7 @@ echo $bak
 auditctl -D
 
 # Add your own files to monitor them!
-files=(/boot/vimlinux/ /boot/vmlinuz /etc/bashrc /etc/crontab /etc/hosts /etc/hosts.allow /etc/host.deny /etc/group /etc/inittab /etc/passwd /etc/resolve.conf /proc/cpuinfo /proc/filesystems /etc/init.d /etc/profile.d /etc/rc.d/init.d /etc/shadow /tmp/)
+files=(/boot/vimlinux/ /boot/vmlinuz /etc/bashrc /etc/crontab /etc/hosts /etc/hosts.allow /etc/host.deny /etc/group /etc/inittab /etc/resolve.conf /proc/cpuinfo /proc/filesystems /etc/init.d /etc/profile.d /etc/rc.d/init.d /tmp/ /usr/sbin/ufw)
 
 
 # creating rules to monitor files
